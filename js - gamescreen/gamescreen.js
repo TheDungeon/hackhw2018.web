@@ -40,15 +40,24 @@ else if (player.color === 2){
 }
 else if (player.color === 3){
   console.log('green');
-  document.getElementById('color').className = 'green';
+  document.getElementById('body').className = 'green';
 }
 
 const isAliveRef = firebase.database().ref("Players").child(playerObject.id);
+const wonRef = firebase.database().ref("Players").child(playerObject.id);
+
+wonRef.on('value', function(snap) {
+  let wonVal = snap.val();
+  console.log(wonVal.won);
+  if(wonVal.won === true){
+    window.location.href = "winscreen.html";
+  }
+});
 
 isAliveRef.on('value', function(snap) {
-  let value = snap.val();
-  console.log(value.isAlive);
-  if(value.isAlive === false){
+  let aliveVal = snap.val();
+  console.log(aliveVal.isAlive);
+  if(aliveVal.isAlive === false){
     window.location.href = "deadscreen.html";
   }
 });

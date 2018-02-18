@@ -19,19 +19,19 @@ nameText.innerHTML += player.name;
 
 if (player.color === 0){
   color = 'blue';
-  document.getElementById('color').className = 'blue';
+  document.getElementById('color').className += 'blue';
 }
 else if (player.color === 1){
   color = 'red';
-  document.getElementById('color').className = 'red';
+  document.getElementById('color').className += 'red';
 }
 else if (player.color === 2){
   color = 'yellow';
-  document.getElementById('color').className = 'yellow';
+  document.getElementById('color').className += 'yellow';
 }
 else if (player.color === 3){
   color = 'green';
-  document.getElementById('color').className = 'green';
+  document.getElementById('color').className += 'green';
 }
 
 var colorText = document.getElementById('color');

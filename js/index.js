@@ -29,6 +29,7 @@ joinButton.addEventListener('click', function() {
   var playerObject = playerRef.push({
       name: usernameTextInput.value,
       isAlive: true,
+      won: false,
       color: numOfChildren % 4
   });
 
