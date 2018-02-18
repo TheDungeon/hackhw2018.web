@@ -18,12 +18,21 @@ const playerObject = JSON.parse(localStorage.getItem("playerId"));
 var stopButton = document.getElementById('stopButton');
 var jumpButton = document.getElementById('jumpButton');
 
+const dataRef = firebase.database().ref();
+const playerRef = dataRef.child('Players');
+
 jumpButton.addEventListener('click', function() {
-  console.log('jump');
+    console.log('jump');
+    var jumpObject = playerRef.push({
+      jump: true
+    });
   });
 
 stopButton.addEventListener('click', function() {
   console.log('stop');
+  var stopObject = playerRef.push({
+    stop: true
+  });
 });
 
 if (player.color === 0){

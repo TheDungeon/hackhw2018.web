@@ -30,7 +30,9 @@ joinButton.addEventListener('click', function() {
       name: usernameTextInput.value,
       isAlive: true,
       won: false,
-      color: numOfChildren % 4
+      color: numOfChildren % 4,
+      jump: false,
+      stop: false
   });
 
   localStorage.setItem('playerId', JSON.stringify({
