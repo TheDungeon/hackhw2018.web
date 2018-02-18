@@ -11,6 +11,11 @@
   font-size: 125px;
 }
 
+body {
+  margin: auto;
+  width: 50%;
+}
+
 .text {
   font-family: 'Hammersmith One',sans-serif;
   font-style: Regular;
@@ -39,6 +44,7 @@
   height: 40px;
   left: 16px;
   top: 216px;
+  text-align: center;
   }
 
 #usernameTextInput {
@@ -47,6 +53,7 @@
   height: 40px;
   left: 395px;
   top: 216px;
+  text-align: center;
 }
 
 .inputText {
