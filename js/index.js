@@ -15,12 +15,10 @@ var roomCode = document.getElementById('roomCodeTextInput');
 
 const dataRef = new Firebase ('https://hack-hw2018.firebaseio.com/');
 const playerRef = dataRef.child('Players');
-var color;
 var numOfChildren; //0:blue, 1:red, 2:yelllow, 3:green
 
-console.log(playerRef.numChildren());
-
 joinButton.addEventListener('click', function() {
+
   playerRef.once('value', function(snap){
     numOfChildren = snap.numChildren()
   });
@@ -30,6 +28,7 @@ joinButton.addEventListener('click', function() {
 
   var playerObject = playerRef.push({
       name: usernameTextInput.value,
+      isAlive: true,
       color: numOfChildren % 4
   });
 
@@ -38,6 +37,6 @@ joinButton.addEventListener('click', function() {
     name: usernameTextInput.value,
     color: numOfChildren % 4
   }));
-  console.log("we good");
+
   window.location.href = "loading.html";
 });
