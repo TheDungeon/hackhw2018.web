@@ -8,8 +8,10 @@
     messagingSenderId: "28719308696"
   };
   firebase.initializeApp(config);
-  
+
 }());
+
+var player = JSON.parse(localStorage.getItem('playerId'));
 
 const playerObject = JSON.parse(localStorage.getItem("playerId"));
 
@@ -23,6 +25,23 @@ jumpButton.addEventListener('click', function() {
 stopButton.addEventListener('click', function() {
   console.log('stop');
 });
+
+if (player.color === 0){
+  console.log('blue');
+  document.getElementById('body').className = 'blue';
+}
+else if (player.color === 1){
+  console.log('red');
+  document.getElementById('body').className = 'red';
+}
+else if (player.color === 2){
+  console.log('yellow');
+  document.getElementById('body').className = 'yellow';
+}
+else if (player.color === 3){
+  console.log('green');
+  document.getElementById('color').className = 'green';
+}
 
 const isAliveRef = firebase.database().ref("Players").child(playerObject.id);
 

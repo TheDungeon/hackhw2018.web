@@ -19,13 +19,33 @@ body {
 }
 
 .characteristic {
-  font-size: 55px;
+  font-size: 40px;
+}
+
+.blue {
+  color:#001868;
+}
+
+.red {
+  color:#9F0400;
+}
+
+.green {
+  color:#006200;
+}
+
+.yellow {
+  color:#FFC600;
 }
 
 #waiting {
-  font-size: 70px;
+  font-size: 50px;
 }
 
-.value {
-  font-size: 55px;
+#name {
+  font-size: 45px;
+}
+
+#color {
+  font-size: 45px;
 }

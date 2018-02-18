@@ -1,12 +1,29 @@
+.blue {
+  background-color: #001868;
+}
+
+.red {
+  background-color: #9F0400;
+}
+
+.green {
+  background-color:#006200;
+}
+
+.yellow {
+  background-color:#FFC600;
+}
+
 #wrap{
   overflow: hidden;
-  width: 600px;  
+  width: 600px;
   margin: 0 auto;
   margin-top: 50px;
 }
 #stopButton {
-  background:#000000;
-  border-radius:0px;
+  background:#666666;
+  border-radius:1px;
+  border-color: #666666;
   padding:96px 75px;
   color:#ffffff;
   /*display:inline-block;*/
@@ -17,8 +34,9 @@
 }
 
 #jumpButton {
-  background:#000000;
+  background:#666666;
   border-radius:1000px;
+  border-color: #666666;
   overflow: hidden;
   padding:105px 75px;
   color:#ffffff;

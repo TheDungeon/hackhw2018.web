@@ -15,16 +15,27 @@ var roomCode = document.getElementById('roomCodeTextInput');
 
 const dataRef = new Firebase ('https://hack-hw2018.firebaseio.com/');
 const playerRef = dataRef.child('Players');
+var color;
+var numOfChildren; //0:blue, 1:red, 2:yelllow, 3:green
 
 joinButton.addEventListener('click', function() {
+  playerRef.once('value', function(snap){
+    numOfChildren = snap.numChildren()
+  });
+
+ console.log(numOfChildren);
+ console.log(numOfChildren % 4);
+
   var playerObject = playerRef.push({
       name: usernameTextInput.value,
-      isAlive: true
+      isAlive: true,
+      color: numOfChildren % 4
   });
 
   localStorage.setItem('playerId', JSON.stringify({
     id: playerObject.name(),
     name: usernameTextInput.value,
+    color: numOfChildren % 4
   }));
   console.log("we good");
   window.location.href = "loading.html";
