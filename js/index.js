@@ -23,16 +23,18 @@ joinButton.addEventListener('click', function() {
     numOfChildren = snap.numChildren()
   });
 
- console.log(numOfChildren);
- console.log(numOfChildren % 4);
-
   var playerObject = playerRef.push({
+      color: numOfChildren % 4,
       name: usernameTextInput.value,
       isAlive: true,
+<<<<<<< Updated upstream
       won: false,
       color: numOfChildren % 4,
       jump: false,
       stop: false
+=======
+      won: false
+>>>>>>> Stashed changes
   });
 
   localStorage.setItem('playerId', JSON.stringify({
