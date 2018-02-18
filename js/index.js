@@ -8,20 +8,24 @@
     messagingSenderId: "28719308696"
   };
   firebase.initializeApp(config);
+
 }());
 var joinButton = document.getElementById('joinRoom');
 var roomCode = document.getElementById('roomCodeTextInput');
 
-const dataRef = new Firebase ('https://hack-hw2018.firebaseio.com/%27')
+const dataRef = new Firebase ('https://hack-hw2018.firebaseio.com/%27');
 const playerRef = dataRef.child('Players');
 
 joinButton.addEventListener('click', function() {
-  playerRef.push({
+  var playerObject = playerRef.push({
       name: usernameTextInput.value,
       isAlive: true
   });
-  usernameTextInput.value = '';
-  roomCodeTextInput.value = '';
+
+  localStorage.setItem('playerId', JSON.stringify({
+    id: playerObject.key,
+    name: usernameTextInput.value,
+  }));
 
   window.location.href = "loading.html";
 })
