@@ -23,14 +23,14 @@ const playerRef = dataRef.child('Players').child(playerObject.id);
 
 jumpButton.addEventListener('click', function() {
     console.log('jump');
-    var jumpObject = playerRef.set({
+    var jumpObject = playerRef.update({
       jump: true
     });
   });
 
 stopButton.addEventListener('click', function() {
   console.log('stop');
-  var stopObject = playerRef.set({
+  var stopObject = playerRef.update({
     stop: true
   });
 });
