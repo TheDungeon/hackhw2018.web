@@ -19,18 +19,18 @@ var stopButton = document.getElementById('stopButton');
 var jumpButton = document.getElementById('jumpButton');
 
 const dataRef = firebase.database().ref();
-const playerRef = dataRef.child('Players');
+const playerRef = dataRef.child('Players').child(playerObject.id);
 
 jumpButton.addEventListener('click', function() {
     console.log('jump');
-    var jumpObject = playerRef.push({
+    var jumpObject = playerRef.set({
       jump: true
     });
   });
 
 stopButton.addEventListener('click', function() {
   console.log('stop');
-  var stopObject = playerRef.push({
+  var stopObject = playerRef.set({
     stop: true
   });
 });
