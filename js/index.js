@@ -27,14 +27,10 @@ joinButton.addEventListener('click', function() {
       color: numOfChildren % 4,
       name: usernameTextInput.value,
       isAlive: true,
-<<<<<<< Updated upstream
       won: false,
       color: numOfChildren % 4,
       jump: false,
       stop: false
-=======
-      won: false
->>>>>>> Stashed changes
   });
 
   localStorage.setItem('playerId', JSON.stringify({
