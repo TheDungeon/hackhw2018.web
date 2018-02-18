@@ -18,6 +18,8 @@ const playerRef = dataRef.child('Players');
 var color;
 var numOfChildren; //0:blue, 1:red, 2:yelllow, 3:green
 
+console.log(playerRef.numChildren());
+
 joinButton.addEventListener('click', function() {
   playerRef.once('value', function(snap){
     numOfChildren = snap.numChildren()
@@ -28,7 +30,6 @@ joinButton.addEventListener('click', function() {
 
   var playerObject = playerRef.push({
       name: usernameTextInput.value,
-      isAlive: true,
       color: numOfChildren % 4
   });
 
