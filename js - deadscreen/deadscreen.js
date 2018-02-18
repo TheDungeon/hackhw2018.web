@@ -8,11 +8,11 @@
     messagingSenderId: "28719308696"
   };
   firebase.initializeApp(config);
-  
+
 }());
 
 var playAgainButton = document.getElementById('playAgainButton');
 
 playAgainButton.addEventListener('click', function(){
-  window.location.href = "homescreen.html";
+  window.location.href = "index.html";
 });

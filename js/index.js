@@ -2,7 +2,7 @@
   var config = {
     apiKey: "AIzaSyC2-ypnwEY0R0GhFAxie2UKlBSuJ_5lBqQ",
     authDomain: "hack-hw2018.firebaseapp.com",
-    databaseURL: "https://hack-hw2018.firebaseio.com/",
+    databaseURL: "https://hack-hw2018.firebaseio.com",
     projectId: "hack-hw2018",
     storageBucket: "hack-hw2018.appspot.com",
     messagingSenderId: "28719308696"
@@ -13,7 +13,7 @@
 var joinButton = document.getElementById('joinRoom');
 var roomCode = document.getElementById('roomCodeTextInput');
 
-const dataRef = new Firebase ('https://hack-hw2018.firebaseio.com/%27');
+const dataRef = new Firebase ('https://hack-hw2018.firebaseio.com/');
 const playerRef = dataRef.child('Players');
 
 joinButton.addEventListener('click', function() {
@@ -23,9 +23,9 @@ joinButton.addEventListener('click', function() {
   });
 
   localStorage.setItem('playerId', JSON.stringify({
-    id: playerObject.key,
+    id: playerObject.name(),
     name: usernameTextInput.value,
   }));
-
+  console.log("we good");
   window.location.href = "loading.html";
-})
+});
