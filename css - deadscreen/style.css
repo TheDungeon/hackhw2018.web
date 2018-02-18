@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One');
+
+body {
+  margin: auto;
+  width: 50%;
+  font-family:'Hammersmith One', sans-serif;
+  font-style: normal;
+  text-align: center;
+}
+
+#dead {
+ font-size: 130px;
+}
+
+#playAgainButton {
+  background:#9900ff;
+  border-radius:25px;
+  padding:8px 20px;
+  color:#ffffff;
+  display:inline-block;
+  font:normal 700 40px/1 "Calibri", sans-serif;
+  text-align:center;
+  text-shadow: 1px 1px #000000;
+}

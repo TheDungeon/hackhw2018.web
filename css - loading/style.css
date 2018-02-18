@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One');
+
+body {
+  margin-top: 10px;
+  margin: auto;
+  width: 50%;
+  font-family: 'Hammersmith One',sans-serif;
+  font-style: normal;
+  text-align: center;
+}
+
+#mainHeader {
+  width: 330px;
+  height: 167px;
+  margin: 0 auto;
+  font-size: 125px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.characteristic {
+  font-size: 37px;
+}
+
+#waiting {
+  font-size: 45px;
+}
+
+.value {
+  font-size: 37px;
+}

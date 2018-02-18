@@ -1,10 +1,10 @@
 
 
 <!--
-Copyright (c) 2018 by Amaan Irfan (https://codepen.io/amaanirfan/pen/JpMxWo)
+Copyright (c) 2018 by Eli Friedman (https://codepen.io/elfriedman2018/pen/qxpgpb)
 
 
-Fork of an original work by Amaan Irfan (https://codepen.io/amaanirfan/pen/VQyVxB)
+Fork of an original work by Amaan Irfan (https://codepen.io/amaanirfan/pen/oEpmLj)
 
 
 
